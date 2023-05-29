@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/SlsaMaskTree/R2020a">
+  <slsa.mm.maskTree.MaskTree type="slsa.mm.maskTree.MaskTree" uuid="d608ea5a-6157-41de-b80a-4f01c751c7f1">
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="aaa29178-5042-4a45-aee6-660717ba9772">
+      <blockPath>Solar/Controlled Voltage Source</blockPath>
+      <id>Solar:1</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="21608a50-337b-4848-8725-cce0df3eac65">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="4fc4d819-e818-4262-9ec3-40666353bfe4">
+          <expression>foundation.electrical.sources.controlled_voltage</expression>
+          <name>ComponentPath</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="478b0902-4f71-4a6a-87ee-c05d3992bcb4">
+          <expression>foundation.electrical.sources.controlled_voltage</expression>
+          <name>ComponentVariants</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="4512d31b-7b89-4415-937c-af7faa726956">
+          <expression>controlled_voltage</expression>
+          <name>ComponentVariantNames</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="2ab0f956-32e6-4db1-a2d0-3b2737da6597">
+          <expression>controlled_voltage</expression>
+          <name>ClassName</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="5151c5d3-7415-4670-a02a-83982f000ab9">
+          <expression>1</expression>
+          <name>SchemaVersion</name>
+        </dialogParameters>
+        <initializationCode>simscape.compiler.sli.internal.preinitmask(gcb);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="9501fd8e-5e2f-4cfb-b119-ed5e741b705e">
+      <blockPath>Solar/Solver Configuration</blockPath>
+      <childrenIds>Solar:12:16</childrenIds>
+      <id>Solar:12</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="e3616ae5-f553-40ec-af0a-b2f778213717">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="08f66093-8705-47b3-aca1-85b9ad8517c6">
+          <expression>network_engine_domain</expression>
+          <name>PhysicalDomain</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f872bd5c-a94f-4703-b730-b597000b15c1">
+          <expression>solver</expression>
+          <name>SubClassName</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c84e3cae-5a69-468f-ac6c-fc869e7d1c5b">
+          <expression>input</expression>
+          <name>LeftPortType</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9169e009-7927-49eb-9087-bb05b1395872">
+          <expression>generic</expression>
+          <name>RightPortType</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3aaee5d6-c5e3-45e8-80e8-128c8f082b5f">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>Tones</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ac955e22-96fd-4da5-a64d-2d36f5cd8dea">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>Harmonics</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="1ad266de-9a7e-46c3-a517-17e9aa30db0c">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>SimulateNoise</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="1f739658-cdfa-4c82-9651-3efc3c842eaa">
+          <expression>[]</expression>
+          <name>IcStateTrace</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="bb5db89e-4a82-472e-ad8c-5cd8b5c0aa7e">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>UseMBLocalSolver</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="448f750c-198b-44e3-9a44-22d81f0454b7">
+          <expression>ODE1</expression>
+          <name>MBLocalSolverChoice</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ae866718-35cc-4cdf-9f36-8da2fdf60275">
+          <evaluate>true</evaluate>
+          <expression>0.001</expression>
+          <name>MBLocalSolverSampleTime</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="86c79226-3f0e-4cda-8cef-ce065fdd9054">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>Profile</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="0ce7c282-d4a7-4fd0-b8d1-920eaedfbbe8">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>UseLocalSampling</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="40aa9b21-105f-4b4b-bcbf-231e4bc3746f">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>EnableSwitchedLinearOptims</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9fb4eb9a-c60c-4cdf-87ab-44a1e3fcd123">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>FrequencyDomain</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="52f65f30-7bff-463a-837a-3427d2a65210">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>UseCCode</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b126c83d-31dc-4e04-8dec-b545e2c41a31">
+          <evaluate>true</evaluate>
+          <expression>0.001</expression>
+          <name>RelTol</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="adf1c866-027c-4396-8d22-e960ed4813aa">
+          <evaluate>true</evaluate>
+          <expression>1e-06</expression>
+          <name>AbsTol</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="aadb0d82-916b-45fa-bfbb-e467dc091d6d">
+          <evaluate>true</evaluate>
+          <expression>1e-09</expression>
+          <name>MinStep</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="06e070eb-6eef-4bb2-99c2-a3960d7934f2">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>ToWorkspace</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="d427af72-4746-4844-89a8-3bd5f68d59f9">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>RevertToSquareIcSolve</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="6b1cb457-7b3f-4aee-972b-8618288ac767">
+          <evaluate>true</evaluate>
+          <expression>100</expression>
+          <name>NumHomotopyIterations</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ccf88600-55e2-4fa7-9d4b-a49b9cd0d9ad">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>PhasorMode</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="8a6020cc-c4f7-4591-98a2-3dc8c09e017d">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>PhasorModeNumHarmonics</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="0f7378ad-2626-41b5-8207-6adf4e0e7de9">
+          <expression>NEWTON_FTOL</expression>
+          <name>ConsistencySolver</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="0e94b022-1667-400c-b9c9-8eecc48c0633">
+          <expression>DerivativeReplacement</expression>
+          <name>IndexReductionMethod</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="53f6e392-dd37-4344-9e90-9759a719956d">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>DoDC</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="34727481-84c1-4d3a-a40d-544dd684704f">
+          <evaluate>true</evaluate>
+          <expression>1e-09</expression>
+          <name>ResidualTolerance</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="af57c0a5-e35a-4d81-981e-45abd3966389">
+          <expression>GLOBAL</expression>
+          <name>ConsistencyTolSource</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="628334e8-4fb7-4190-9760-2f0dc7516955">
+          <evaluate>true</evaluate>
+          <expression>0.001</expression>
+          <name>ConsistencyAbsTol</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="a3b5c797-9a8a-4cf2-b8c7-2c3c34155847">
+          <evaluate>true</evaluate>
+          <expression>0.001</expression>
+          <name>ConsistencyRelTol</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="6f7118db-0519-4ba4-929a-26a635eadce7">
+          <evaluate>true</evaluate>
+          <expression>0.001</expression>
+          <name>ConsistencyTolFactor</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="2f41b681-424d-4f4e-ad15-c63bac102451">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>UseLocalSolver</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="768b98cc-0ec5-455b-9a6b-4dfb1d456566">
+          <expression>NE_BACKWARD_EULER_ADVANCER</expression>
+          <name>LocalSolverChoice</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="288faafd-44ea-4b33-90a3-ace77e9d9c6c">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>ResolveIndetEquations</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b44882bf-4ca1-44a2-95d9-b20c108a8ac1">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>FunctionEvalNumThread</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="df44b213-28b7-4dce-98d3-d4e0ba4594e4">
+          <evaluate>true</evaluate>
+          <expression>1e-4</expression>
+          <name>LocalSolverSampleTime</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b4a74e3b-f819-4dd2-a4b8-769692917e1d">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>DoFixedCost</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="8e2f40f9-6afd-47c8-be37-109d22bcdfd6">
+          <evaluate>true</evaluate>
+          <expression>3</expression>
+          <name>MaxNonlinIter</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="81e8e1ad-5061-4ca9-9426-90ea25bca377">
+          <evaluate>true</evaluate>
+          <expression>2</expression>
+          <name>MaxModeIter</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f7e1b5ee-cb30-4905-b3bf-77aac690b684">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>ComputeImpulses</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="116e9d7e-5a4f-4cd1-beeb-0c6aa4257752">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>ImpulseIterations</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="509a6722-e738-43c6-8282-1539ed2997f5">
+          <expression>auto</expression>
+          <name>LinearAlgebra</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="92ab158f-87fc-4310-a73b-ba44431d601f">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>LinearAlgebraNumThread</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="70b919f8-5fa5-4434-8101-defc1b201019">
+          <expression>NE_TIME_EF</expression>
+          <name>EquationFormulation</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="51d31cdc-0147-4a71-8403-656a5a4e42ba">
+          <evaluate>true</evaluate>
+          <expression>1024</expression>
+          <name>DelaysMemoryBudget</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f7e59702-d50d-4233-86af-681ff4ed45af">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>AutomaticFiltering</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c0d8a60c-1376-4d5d-a370-34b110b4a538">
+          <evaluate>true</evaluate>
+          <expression>0.001</expression>
+          <name>FilteringTimeConstant</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="cfcd9637-1b74-4a0b-8d27-54a6dfc53a22">
+          <expression>AS_NEEDED</expression>
+          <name>PartitionStorageMethod</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="0c1e9e13-18d0-4d3d-b65a-09cc6aff0302">
+          <evaluate>true</evaluate>
+          <expression>1024</expression>
+          <name>PartitionMemoryBudget</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="2a3476ab-f8bb-4695-b9d6-d2344c783fac">
+          <expression>ROBUST</expression>
+          <name>PartitionMethod</name>
+        </dialogParameters>
+        <initializationCode>nesl_maskinitialization(gcbh);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="e55089de-9307-45ed-a9c6-a5856fdd531b">
+      <blockPath>Solar/Solver Configuration/EVAL_KEY</blockPath>
+      <id>Solar:12:16</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="d4ea3535-e118-4933-8f94-32d34656f4ef">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="8f6252d4-f9c8-4c32-bf5f-44dbe3a52325">
+          <expression>eval_key</expression>
+          <name>SubClassName</name>
+        </dialogParameters>
+        <initializationCode>nesl_maskinitialization(gcbh);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>Solar:12</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="2acb43f5-9a38-4254-84c4-5ff30ffc7b25">
+      <blockPath>Solar/Test Voltage</blockPath>
+      <id>Solar:13</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="f87a9eb3-3786-4550-bb17-871ac9d7b037">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="eaf71ff3-c230-4f3e-bbf1-24e6b6ced575">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <isTunable>true</isTunable>
+          <name>slope</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="77061e7f-7d89-4cf2-a0e0-898b04fa36a0">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>start</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="012929ed-f531-4389-95ee-94e8088f4cef">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>InitialOutput</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ffb9d07a-9db7-4538-bf1c-1a77da84c613">
+          <expression>on</expression>
+          <name>VectorParams1D</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+set_param([blkName &apos;/Constant&apos;], &apos;VectorParams1D&apos;,VectorParams1D);
+set_param([blkName &apos;/Constant1&apos;], &apos;VectorParams1D&apos;,VectorParams1D);
+set_param([blkName &apos;/Step&apos;], &apos;VectorParams1D&apos;,VectorParams1D);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="9de19a59-c5ca-4f01-b446-f241b16f7837">
+      <blockPath>Solar/Current Sensor</blockPath>
+      <id>Solar:14</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="0d1d9bb3-fd1a-476b-9180-2a6ccc2cef5b">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f730d0f7-80d2-4af2-b47d-e9d053969278">
+          <expression>foundation.electrical.sensors.current</expression>
+          <name>ComponentPath</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="787217d4-6efe-4884-a0c6-fd43ea10fd9b">
+          <expression>[&quot;foundation.electrical.sensors.current&quot;]</expression>
+          <name>ComponentVariants</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="8142d516-cd5c-4eb4-a235-744db9147274">
+          <expression>[&quot;current&quot;]</expression>
+          <name>ComponentVariantNames</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="abfed6bd-1f33-46ee-9181-fde8c97889b0">
+          <expression>current</expression>
+          <name>ClassName</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b2b6186e-a644-44a2-8c18-fdf94813d8b6">
+          <expression>1</expression>
+          <name>SchemaVersion</name>
+        </dialogParameters>
+        <initializationCode>simscape.compiler.sli.internal.preinitmask(gcb);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="0f04d5fd-25d9-474f-b5c0-1170720d3f48">
+      <blockPath>Solar/PS-Simulink Converter</blockPath>
+      <childrenIds>Solar:18:11</childrenIds>
+      <id>Solar:18</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="75791473-920f-40f7-a6ca-ce3c1b8e6e97">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="0b4787d3-1cbe-404b-8d04-7742b2aaa046">
+          <expression>network_engine_domain</expression>
+          <name>PhysicalDomain</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="77d9b7da-1f49-4964-9ab7-c2ffdb1e3e5f">
+          <expression>ps_output</expression>
+          <name>SubClassName</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="5a2aea15-d6f7-4053-b779-652400bad8a3">
+          <expression>input</expression>
+          <name>LeftPortType</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b92c59bd-d57b-45a1-80e5-ea75efdc9f4e">
+          <expression>output</expression>
+          <name>RightPortType</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="0fead3cd-d80e-455f-b3f9-97349f4c9be1">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>PseudoPeriodic</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="0acb70ae-7453-41b3-8e00-aa302c2c4635">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>Frequencies</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="78dec9ee-62d6-4a36-a5dd-90d77a63d5cb">
+          <expression>inherit</expression>
+          <name>VectorFormat</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9505cb7b-7a5a-4950-96c7-ac07a3d9f854">
+          <expression>inherit</expression>
+          <name>Unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="090e02f5-2da6-4cce-b339-10aabe9ebbff">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>AffineConversion</name>
+        </dialogParameters>
+        <initializationCode>nesl_maskinitialization(gcbh);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="75caafa0-acbf-4ddb-a040-58647a90a267">
+      <blockPath>Solar/PS-Simulink Converter/EVAL_KEY</blockPath>
+      <id>Solar:18:11</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="e04a6815-babb-44a8-b724-475b5550f2cb">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="39b26f32-5d1a-4e4a-8bb4-b8c5b172c18d">
+          <expression>eval_key</expression>
+          <name>SubClassName</name>
+        </dialogParameters>
+        <initializationCode>nesl_maskinitialization(gcbh);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>Solar:18</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="838297bf-5a22-4835-9901-fd08d2d0f931">
+      <blockPath>Solar/Electrical Reference</blockPath>
+      <id>Solar:2</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="448f1320-f6d1-4c3e-8404-e6ddfa10bc59">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="04754473-a359-4b94-b0fa-92a25ff7873c">
+          <expression>foundation.electrical.elements.reference</expression>
+          <name>ComponentPath</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3814ecc3-0ca1-400a-9739-39bbdbba89a4">
+          <expression>foundation.electrical.elements.reference</expression>
+          <name>ComponentVariants</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9a8efd5f-5550-4535-81b6-5a9ecf05dd40">
+          <expression>reference</expression>
+          <name>ComponentVariantNames</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c6f27b03-0f17-43c7-be2b-11add6b2841c">
+          <expression>reference</expression>
+          <name>ClassName</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="e18b7c2b-f067-4c96-8480-01500d1d0cb6">
+          <expression>1</expression>
+          <name>SchemaVersion</name>
+        </dialogParameters>
+        <initializationCode>simscape.compiler.sli.internal.preinitmask(gcb);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="be5ceb66-ffed-4a83-be81-86ebb01878f2">
+      <blockPath>Solar/Simulink-PS Converter</blockPath>
+      <childrenIds>Solar:4:2</childrenIds>
+      <id>Solar:4</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="3e4657b5-1a2b-4f99-90c2-ce72d1488c34">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="72290676-c46b-41cc-883f-ab2aed45e043">
+          <expression>network_engine_domain</expression>
+          <name>PhysicalDomain</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="2c3cc084-313e-461e-a933-bed275546b6f">
+          <expression>ps_input</expression>
+          <name>SubClassName</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="a85ee332-e23b-4d5f-a8a5-4ad9d94dd7f5">
+          <expression>input</expression>
+          <name>LeftPortType</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="89aaabe0-d5d3-4e6d-90e7-0c985810d89a">
+          <expression>output</expression>
+          <name>RightPortType</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c29f8fdd-8f98-4f36-a77e-43247f8238a3">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>PseudoPeriodic</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="5bcaabb1-a110-4179-bf57-5d986ca35011">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>Frequencies</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="735be43a-e9bb-401e-a477-291f0821aa0a">
+          <expression>none</expression>
+          <name>NoiseDistribution</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="28c8ec1c-c5e0-40bc-a73b-5e89db1919ab">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>NoiseParameters</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="735acf43-bd34-479f-9770-f6414fb4dc18">
+          <expression>1</expression>
+          <name>Unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="d3065cdd-edeb-48ae-bbaa-81aca1b3e0df">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>AffineConversion</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="fb565ba8-7608-4452-8db9-bbd4249adfdf">
+          <expression>provide</expression>
+          <name>FilteringAndDerivatives</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f62a22cc-9b53-4f83-ba5c-ea355a0bc11c">
+          <expression>1</expression>
+          <name>SimscapeFilterOrder</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="797d9663-e78f-425c-9c86-22fd61c425f7">
+          <evaluate>true</evaluate>
+          <expression>0.001</expression>
+          <name>InputFilterTimeConstant</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="354f2790-b893-4451-8cb0-96a46ea8801c">
+          <expression>0</expression>
+          <name>UdotUserProvided</name>
+        </dialogParameters>
+        <initializationCode>nesl_maskinitialization(gcbh);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="f841d020-9f9b-4e39-b847-82745d4e3ab8">
+      <blockPath>Solar/Simulink-PS Converter/EVAL_KEY</blockPath>
+      <id>Solar:4:2</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="368a31d1-a845-4c0e-b079-6bb00a83209f">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b331d578-81e1-42f2-854c-08b788ba93c7">
+          <expression>eval_key</expression>
+          <name>SubClassName</name>
+        </dialogParameters>
+        <initializationCode>nesl_maskinitialization(gcbh);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>Solar:4</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="f189f8c2-b42b-4255-a851-db7d2526ddcc">
+      <blockPath>Solar/Simulink-PS Converter1</blockPath>
+      <childrenIds>Solar:5:2</childrenIds>
+      <id>Solar:5</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="8607d64f-5dca-4865-b4b0-a8e4bbc616b1">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="29a8423b-654e-4681-93f1-96a2945a0608">
+          <expression>network_engine_domain</expression>
+          <name>PhysicalDomain</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="2051cca0-fc1b-4b80-842d-c15c386b4229">
+          <expression>ps_input</expression>
+          <name>SubClassName</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="cd3245f4-84ff-47e5-813a-1e1f547e484e">
+          <expression>input</expression>
+          <name>LeftPortType</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="22f330b0-0fd4-4c40-8f7a-ac1b13b610ea">
+          <expression>output</expression>
+          <name>RightPortType</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c9c46229-18ca-4ecf-8761-c1c45b1d1445">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>PseudoPeriodic</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="89e209db-a194-44a2-98eb-542993128a0f">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>Frequencies</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="431ab72f-5b68-4a82-bdca-dd9ecc5f58d1">
+          <expression>none</expression>
+          <name>NoiseDistribution</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="1beb1812-516e-46e5-ae4a-b62987789a30">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>NoiseParameters</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f4c8a684-ed01-4ba2-aafe-cfc7572f83ab">
+          <expression>1</expression>
+          <name>Unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3f74670e-4d55-4dbd-819b-7e2ea0ba41d9">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>AffineConversion</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="328748c3-fa50-4b9b-a9bc-7b0c24addb69">
+          <expression>provide</expression>
+          <name>FilteringAndDerivatives</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="0d1a3697-4ebd-4c4f-9ae5-efd0253e85d8">
+          <expression>1</expression>
+          <name>SimscapeFilterOrder</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b3e054fd-a73a-46fc-85b0-0f3922dfc8d9">
+          <evaluate>true</evaluate>
+          <expression>0.001</expression>
+          <name>InputFilterTimeConstant</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="caade6b4-6513-4986-a96c-4184623f5bf0">
+          <expression>0</expression>
+          <name>UdotUserProvided</name>
+        </dialogParameters>
+        <initializationCode>nesl_maskinitialization(gcbh);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="34221f3e-d554-4756-90d9-527a153c946f">
+      <blockPath>Solar/Simulink-PS Converter1/EVAL_KEY</blockPath>
+      <id>Solar:5:2</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="aa5e6f6c-bceb-4fae-933c-9bf41b6be171">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="5552c60e-2b66-4ae3-b195-95ac30780e5b">
+          <expression>eval_key</expression>
+          <name>SubClassName</name>
+        </dialogParameters>
+        <initializationCode>nesl_maskinitialization(gcbh);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>Solar:5</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="59fe236f-386b-4353-ba86-e975f3f88b8a">
+      <blockPath>Solar/Solar Panel/Current-Controlled Current Source</blockPath>
+      <id>Solar:7</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="0baf3c93-6471-463b-b6ae-583bde6f64f2">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b4d27e9c-9a5a-4d64-a6e3-8d0d658d3cab">
+          <expression>foundation.electrical.sources.cccs</expression>
+          <name>ComponentPath</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="5c0561d9-5983-4532-86ca-58a4759b70b5">
+          <expression>foundation.electrical.sources.cccs</expression>
+          <name>ComponentVariants</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="29ab2ff8-e00a-46e5-a587-bb16532227fb">
+          <expression>cccs</expression>
+          <name>ComponentVariantNames</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c45b5c34-0cd1-491a-b68a-c8811d0083fc">
+          <expression>cccs</expression>
+          <name>ClassName</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3c52c209-c341-4d53-b4a7-4869bfc9cf22">
+          <expression>1</expression>
+          <name>SchemaVersion</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="a73f3e19-497d-4a68-bb8e-347c5a39fa94">
+          <evaluate>true</evaluate>
+          <expression>-1*(Np_cell-1)</expression>
+          <name>K</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="95b37eb1-6136-464d-ade2-6a69ceecb28f">
+            <name>Np_cell</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="65b0445d-af5b-4edb-83e9-9216f5558fa4">
+          <expression>1</expression>
+          <name>K_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="181eac0b-4a01-4f85-8f4c-52bf7e9f50f2">
+          <expression>compiletime</expression>
+          <name>K_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b42ef8e6-09fe-463e-8019-ef9b77221861">
+          <expression>off</expression>
+          <name>i1_specify</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="37bc1ae2-f690-4770-9aca-32f4904f4b7a">
+          <expression>None</expression>
+          <name>i1_priority</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="0b033611-c8ca-46cc-bd49-19825a857349">
+          <expression>0</expression>
+          <name>i1</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="964b1b98-91f2-4074-a5c5-ca64c0841b37">
+          <expression>A</expression>
+          <name>i1_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c919223a-17ca-4b06-9187-76459ec20b76">
+          <expression>off</expression>
+          <name>i1_nominal_specify</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9a797474-c10e-436b-8f35-1a1a162614e8">
+          <expression>A</expression>
+          <name>i1_nominal_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="e021b02f-510b-4da5-a05a-8be8cb4c462e">
+          <expression>1</expression>
+          <name>i1_nominal_value</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="a436ca92-4212-40c2-958c-b152efeafc22">
+          <expression>off</expression>
+          <name>i2_specify</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="105d00ad-29fa-40fb-adce-4b00eb500887">
+          <expression>None</expression>
+          <name>i2_priority</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="215b6132-9522-4442-92e8-ed93ed7ba199">
+          <expression>0</expression>
+          <name>i2</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="1bdb69e1-11c5-4eab-9431-1234f14d5710">
+          <expression>A</expression>
+          <name>i2_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="a012276e-4a6c-4d32-bdc5-c786c8000fc3">
+          <expression>off</expression>
+          <name>i2_nominal_specify</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="abf0d4f0-b787-456c-a50a-7f72d0a6de05">
+          <expression>A</expression>
+          <name>i2_nominal_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="03ea0620-55ec-45d8-ad25-cd24b70a93c5">
+          <expression>1</expression>
+          <name>i2_nominal_value</name>
+        </dialogParameters>
+        <initializationCode>simscape.compiler.sli.internal.preinitmask(gcb);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>Solar:6</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="16adcf49-1ecd-4338-bea2-2c8b56dad6be">
+      <blockPath>Solar/Solar Panel/Solar Cell</blockPath>
+      <id>Solar:8</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="c79f889b-8be1-4031-b36b-34812c5e4aa2">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="dcae8ef7-881b-4522-a1aa-b03bc90c3102">
+          <expression>ee.sources.solar_cell</expression>
+          <name>ComponentPath</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3955c862-8a1b-4e07-a55c-401c61edb98d">
+          <expression>ee.sources.solar_cell, ee.sources.solar_cell_thermal</expression>
+          <name>ComponentVariants</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="7a4b270f-bc3c-4e80-aa72-fbda26bb81cb">
+          <expression>No thermal port, Show thermal port</expression>
+          <name>ComponentVariantNames</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="79d689ef-ff31-4660-b322-d20059a038d3">
+          <expression>Simscape variant</expression>
+          <name>ClassName</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="94c781a3-3061-41f7-a9c4-af1753318c05">
+          <expression>1</expression>
+          <name>SchemaVersion</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="06759e74-e5e7-458e-a4dc-b43c41758463">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>prm</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ca53ce5d-fa56-4e52-b0b3-7b1be2c7363c">
+          <expression>1</expression>
+          <name>prm_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="34e58063-ed4d-4218-8f1f-1dab754066cf">
+          <expression>compiletime</expression>
+          <name>prm_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="1e9f4a14-e7d5-48ce-9a21-4cfd22a33298">
+          <evaluate>true</evaluate>
+          <expression>Isc/Np_cell</expression>
+          <name>Isc</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="e2ffec14-c391-4621-8db6-5e116f6d541a">
+            <name>Isc</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="ed78a165-ed43-4849-8443-5240db9cd1b0">
+            <name>Np_cell</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="e4e469b2-d7eb-4b05-a46a-3bd86934702a">
+          <expression>A</expression>
+          <name>Isc_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="91f5003e-a04d-4914-b27b-a61acb1bc734">
+          <expression>compiletime</expression>
+          <name>Isc_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9268484b-7567-4145-8cec-0880f761ec1b">
+          <evaluate>true</evaluate>
+          <expression>Voc/Ns_cell</expression>
+          <name>Voc</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="b7dec998-4c44-4f31-9d65-72e718496ee3">
+            <name>Voc</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="2458485e-4e7c-4900-8349-68b9d69f5b11">
+            <name>Ns_cell</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f26e56f4-c1d8-45c6-9c7d-8412b33e1f9c">
+          <expression>V</expression>
+          <name>Voc_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3f25483c-a6ee-4ff0-8f69-5f4db5a150f8">
+          <expression>compiletime</expression>
+          <name>Voc_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="dadef0df-1046-437d-9268-e4ebd7e0ab1b">
+          <expression>1e-6</expression>
+          <name>Is</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c26b1839-6d99-4276-adf6-6edf565bcb2d">
+          <expression>A</expression>
+          <name>Is_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ef12adeb-ddf6-4f7b-a82d-78d49b3538d9">
+          <expression>compiletime</expression>
+          <name>Is_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="59e00ad0-163c-41d7-8251-73ba064ce5c4">
+          <expression>0</expression>
+          <name>Is2</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="2a831e70-a835-48fa-93d1-f50d711e1ffe">
+          <expression>A</expression>
+          <name>Is2_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="58f08144-38d1-474c-9805-572255542a21">
+          <expression>compiletime</expression>
+          <name>Is2_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c0d14700-894e-4837-8162-fe76c5c72b1f">
+          <expression>7.34</expression>
+          <name>Iph</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3aec07eb-7c19-4e52-87ab-cdf6f82660f5">
+          <expression>A</expression>
+          <name>Iph_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="516180c3-e511-4a91-adde-363d1f709e53">
+          <expression>compiletime</expression>
+          <name>Iph_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="54a87098-64f9-4ac2-bd8c-301b0f6890a7">
+          <evaluate>true</evaluate>
+          <expression>Irad</expression>
+          <name>Ir0</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="3b074179-6319-4400-ba92-539754c2498a">
+            <name>Irad</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="e8f25153-66e2-4ed8-9364-04d47f064d35">
+          <expression>W/m^2</expression>
+          <name>Ir0_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="4640a96b-99e3-4ea1-81a6-afd11588154c">
+          <expression>compiletime</expression>
+          <name>Ir0_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="19d9a810-7d91-4fcb-9193-a1bb8c5b6b73">
+          <evaluate>true</evaluate>
+          <expression>NQ</expression>
+          <name>ec</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="fa2904ce-a4b3-4c91-a377-27cd3b7e0465">
+            <name>NQ</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="2f3e3ade-404a-42cf-9149-d6c35aaf6834">
+          <expression>1</expression>
+          <name>ec_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f6814ce4-2380-4968-9b86-aa2cb0f0f9dc">
+          <expression>compiletime</expression>
+          <name>ec_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9dae3a12-89f5-4efd-83b2-e18c4dba6cb8">
+          <expression>2</expression>
+          <name>N2</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="945eb878-262d-478a-9703-06089e50c6ad">
+          <expression>1</expression>
+          <name>N2_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="748de314-9239-4f62-9ae4-785af4bfac47">
+          <expression>compiletime</expression>
+          <name>N2_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ae785754-e4d7-4d55-b1a2-b0c498e4e776">
+          <evaluate>true</evaluate>
+          <expression>Rs</expression>
+          <name>Rs</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="56dd1747-0c61-4fa4-843c-709230a109a3">
+            <name>Rs</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="00b1b7e0-7a8e-4564-a750-849001dcbf0d">
+          <expression>Ohm</expression>
+          <name>Rs_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="15eb3ecf-188e-4c38-b3c2-d1e85f38020b">
+          <expression>compiletime</expression>
+          <name>Rs_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="067381b0-d9d2-4e5b-8dcc-8dde3532e4fe">
+          <expression>inf</expression>
+          <name>Rp</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="6df3df8d-1c05-4bb5-ac41-d80aa6808717">
+          <expression>Ohm</expression>
+          <name>Rp_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="fb94e4fe-d915-4385-aad1-d34582acc2ca">
+          <expression>compiletime</expression>
+          <name>Rp_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="e7051cea-789e-4b39-a18a-8354c6531e8d">
+          <evaluate>true</evaluate>
+          <expression>Ns_cell</expression>
+          <name>N_series</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="ac725459-221d-45df-b7fa-555e13ea8ab0">
+            <name>Ns_cell</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f2d5e6da-ef1d-4588-83b7-079ba84f016a">
+          <expression>1</expression>
+          <name>N_series_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="91533803-10e5-47ee-a9f6-10b5d66ae6ea">
+          <expression>compiletime</expression>
+          <name>N_series_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="a3f98a80-f8fc-43be-9471-1ad800544f15">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>N_parallel</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="1a165081-dd5c-4838-98b2-8a900204f95c">
+          <expression>1</expression>
+          <name>N_parallel_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f93c7f3b-a66f-4430-8ed5-48360c46ae25">
+          <expression>compiletime</expression>
+          <name>N_parallel_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="a481714e-2086-4f5d-8722-16f81a64e526">
+          <evaluate>true</evaluate>
+          <expression>Tct</expression>
+          <name>TIPH1</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="165d4dd7-2afe-43d5-81a6-d8720f235b99">
+            <name>Tct</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="7768aa23-57cd-4c5a-8b84-3686dca9af83">
+          <expression>1/K</expression>
+          <name>TIPH1_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b886871a-26c6-452a-8fc0-38e4aaf0033f">
+          <expression>compiletime</expression>
+          <name>TIPH1_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b52dada9-765c-45bb-bbc5-df312433d0f5">
+          <evaluate>true</evaluate>
+          <expression>1.11</expression>
+          <name>EG</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c178490d-4bf0-4d93-aaf3-155c8ba870c1">
+          <expression>eV</expression>
+          <name>EG_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="e062b6b2-dd48-491a-a156-e659e18f9d50">
+          <expression>compiletime</expression>
+          <name>EG_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="44812aa4-6613-4f30-8644-4afad2648539">
+          <evaluate>true</evaluate>
+          <expression>TXIS1</expression>
+          <name>TXIS1</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="972beab2-b62a-4df3-8bac-7aae16b528da">
+            <name>TXIS1</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f4dde331-2114-43e3-8478-cc8c1d987c2e">
+          <expression>1</expression>
+          <name>TXIS1_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="af8b6193-144e-4d57-a181-97a9c19f8197">
+          <expression>compiletime</expression>
+          <name>TXIS1_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="91bdd095-31b4-47c4-b519-9b1f3f24d3ea">
+          <expression>3</expression>
+          <name>TXIS2</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="d89113a5-da62-49b3-a7d8-1edd4646aaf6">
+          <expression>1</expression>
+          <name>TXIS2_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="92a52912-9e11-4a56-bca6-8d24e0044f84">
+          <expression>compiletime</expression>
+          <name>TXIS2_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="6ab3c5b9-13d9-4fcf-a410-14ab0bc468e6">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>TRS1</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="db2eb314-9419-4c57-9da1-1deb92c84ef1">
+          <expression>1</expression>
+          <name>TRS1_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="711f36db-15c5-4b7e-8675-8a48f3db56f5">
+          <expression>compiletime</expression>
+          <name>TRS1_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="4ffc14a1-68a3-4292-98c6-1e7086eaee61">
+          <expression>0</expression>
+          <name>TRP1</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c1551289-6e47-4712-a18d-8cee2f47191b">
+          <expression>1</expression>
+          <name>TRP1_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="84fe9a22-4675-46fa-8d4f-e1fe78a88c13">
+          <expression>compiletime</expression>
+          <name>TRP1_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f4614935-77fe-41e9-9eb4-14693de49c89">
+          <evaluate>true</evaluate>
+          <expression>Tmeas</expression>
+          <name>Tmeas</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="82abe5ca-27cf-43fc-b991-37b540d915ad">
+            <name>Tmeas</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="a27ab77a-f68e-49c2-84b7-861f6ec9f0b9">
+          <expression>degC</expression>
+          <name>Tmeas_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="7a93a8c9-097f-4b7f-b899-d3c061e88a7c">
+          <expression>compiletime</expression>
+          <name>Tmeas_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="cd06d6fc-b3b0-499a-987a-110ab85b1b24">
+          <evaluate>true</evaluate>
+          <expression>temperature</expression>
+          <name>TFIXED</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="522067a1-5782-4edf-b2a0-c1b1b97dee1a">
+            <name>temperature</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b24f1429-eb05-4ae1-90e6-57b91ee3543a">
+          <expression>degC</expression>
+          <name>TFIXED_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="59fc5b8e-7fd9-4512-91fa-eef1584dfb48">
+          <expression>compiletime</expression>
+          <name>TFIXED_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="70a25524-ad3b-4b57-bd05-694ace480fd8">
+          <expression>100</expression>
+          <name>thermal_mass</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="8c15aee4-d9d3-4f21-8328-6b3d25f4d9eb">
+          <expression>J/K</expression>
+          <name>thermal_mass_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="19481e16-2040-425c-b74d-52265fe81ba0">
+          <expression>compiletime</expression>
+          <name>thermal_mass_conf</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="046d7237-d8a2-457b-b393-62c0b07b05b1">
+          <expression>25</expression>
+          <name>initial_temperature</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="081dd50a-be6b-4bfb-9e6a-7aca41f8f939">
+          <expression>degC</expression>
+          <name>initial_temperature_unit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c61f5a5a-9208-46ba-bbbf-ce714f60ae07">
+          <expression>compiletime</expression>
+          <name>initial_temperature_conf</name>
+        </dialogParameters>
+        <initializationCode>simscape.compiler.sli.internal.preinitmask(gcb);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>Solar:6</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="f12dda64-c575-43a0-a78a-5d24c1879dc7">
+      <childrenIds>Solar:1</childrenIds>
+      <childrenIds>Solar:12</childrenIds>
+      <childrenIds>Solar:13</childrenIds>
+      <childrenIds>Solar:14</childrenIds>
+      <childrenIds>Solar:18</childrenIds>
+      <childrenIds>Solar:2</childrenIds>
+      <childrenIds>Solar:4</childrenIds>
+      <childrenIds>Solar:5</childrenIds>
+      <childrenIds>Solar:7</childrenIds>
+      <childrenIds>Solar:8</childrenIds>
+      <id>root</id>
+    </maskedBlocks>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="e3ecdc0c-9c21-4e97-9c1e-94e4fe0ae859">
+      <name>Irad</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAQI9A</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="5cf16886-628c-4abc-8d1a-8c308d208f07">
+      <name>Isc</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAFyPwvUoXCBA</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="d5368a86-728d-415c-a0dd-d472bad2a727">
+      <name>NQ</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAPg/</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="568fde61-ffaf-4751-9825-43c7a576bb05">
+      <name>Np_cell</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAAhA</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="6b611c49-c249-4044-b6aa-69487f03b897">
+      <name>Ns_cell</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAE5A</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="2885e9de-b51c-41a2-a9bc-f9fb1133bb15">
+      <name>Rs</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAAAA</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="d455e02d-4e2d-4ca9-86c2-9b3c7c62120e">
+      <name>TXIS1</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAAhA</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="b384333f-0ed0-40ad-8cac-86278f764c35">
+      <name>Tct</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAC1DHOviNjo/</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="6d3608aa-26e8-4a5a-8c5f-242f03c53b58">
+      <name>Tmeas</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAADlA</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="7747913d-e67b-4c75-8c74-0eb9d9e4abcb">
+      <name>Voc</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAJqZmZmZWUJA</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="a1470321-6a32-46c2-8d36-084cee4fa731">
+      <name>temperature</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAADlA</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <flags type="slsa.mm.maskTree.MaskTreeFlags" uuid="b757a086-08cb-401b-a3f6-cbc6fafeb29c"/>
+  </slsa.mm.maskTree.MaskTree>
+</MF0>
